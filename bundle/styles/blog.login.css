@@ -1,0 +1,264 @@
+body.passport-body {
+  background-color: #444;
+  font-family: "MicroSoft YaHei", SimSun, sans-serif; }
+  body.passport-body * {
+    box-sizing: border-box; }
+  body.passport-body .main-wrap {
+    position: relative; }
+
+.passport-page {
+  text-align: center;
+  padding: 0 6%; }
+  .passport-page .bind-tip {
+    margin-top: 10PX;
+    margin-bottom: 10PX;
+    color: #fff;
+    font-size: 13PX; }
+    .passport-page .bind-tip .title {
+      font-size: 28PX;
+      line-height: 1.5; }
+  .passport-page .tip {
+    margin-top: 30PX;
+    color: #fff;
+    font-size: 16PX;
+    line-height: 2; }
+    .passport-page .tip a {
+      color: #3fb274; }
+  .passport-page .header {
+    position: relative;
+    height: 40PX;
+    margin: 20PX 0 30PX; }
+    .passport-page .header .go-back {
+      display: block;
+      position: absolute;
+      height: 30PX;
+      width: 30PX;
+      top: 5PX;
+      left: 0;
+      background: url("/bundle/images/passport/go-back.png") no-repeat;
+      background-size: 100% 100%; }
+    .passport-page .header .title {
+      font-size: 20PX;
+      line-height: 40PX;
+      color: #fff; }
+    .passport-page .header .img-header {
+      width: 68PX;
+      height: 40PX;
+      background: url("/bundle/images/passport/yoho-family.png") no-repeat;
+      background-size: 100% 100%;
+      margin: 0 auto; }
+  .passport-page .input-container,
+  .passport-page .select-container {
+    position: relative;
+    width: 100%;
+    height: 52PX;
+    font-size: 20PX;
+    background-color: #575757;
+    border: 1px solid #606060;
+    border-radius: 5PX;
+    text-align: left;
+    color: #fff; }
+  .passport-page .select-container .select {
+    position: absolute;
+    height: 50PX;
+    padding-right: 40PX;
+    right: 0;
+    color: #fff;
+    background-color: #575757;
+    border: 0;
+    border-radius: 5PX;
+    appearance: none;
+    direction: rtl;
+    -webkit-appearance: none; }
+    .passport-page .select-container .select:focus {
+      outline: 0;
+      border: none; }
+    .passport-page .select-container .select:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #fff; }
+  .passport-page .select-container .select-title {
+    line-height: 2.5;
+    margin-left: 15PX; }
+  .passport-page .select-container .arrow-right {
+    position: absolute;
+    width: 13PX;
+    height: 20PX;
+    right: 15PX;
+    top: 16PX;
+    background: url("/bundle/images/passport/arrow-right.png") no-repeat;
+    background-size: 100% 100%; }
+  .passport-page .has-eye,
+  .passport-page .has-clear {
+    padding-right: 30PX; }
+  .passport-page .area-code {
+    position: absolute;
+    left: 15PX;
+    line-height: 2.5; }
+  .passport-page .phone-container {
+    padding-left: 55PX; }
+  .passport-page .input {
+    width: 100%;
+    line-height: 26PX;
+    padding: 12PX 0;
+    padding-left: 15PX;
+    border-radius: 5PX;
+    color: #fff;
+    background-color: transparent;
+    border: none; }
+  .passport-page .btn {
+    display: block;
+    width: 100%;
+    font-size: 20PX;
+    line-height: 2.5;
+    background-color: #36a74c;
+    border-radius: 5PX;
+    color: #fff;
+    border: none;
+    outline: none; }
+    .passport-page .btn.disable, .passport-page .btn:disabled {
+      background-color: #a2a2a2; }
+  .passport-page .country-select.in-android-uc {
+    width: 140PX; }
+  .passport-page .clear-input {
+    position: absolute;
+    display: none;
+    top: 18PX;
+    right: 10PX;
+    width: 16PX;
+    height: 16PX;
+    background: url("/bundle/images/passport/clear-input.png") no-repeat;
+    background-size: 100% 100%;
+    outline: none;
+    border: none;
+    padding: 0;
+    /* button has padding in default */ }
+  .passport-page .eye {
+    position: absolute;
+    top: 20PX;
+    right: 10PX;
+    width: 19PX;
+    height: 12PX;
+    background: url("/bundle/images/passport/eye.png") no-repeat;
+    background-size: 100% 100%; }
+    .passport-page .eye.close {
+      background-image: url("/bundle/images/passport/eye-close.png"); }
+  .passport-page .row {
+    margin-bottom: 10PX; }
+
+.login-page .yoho-logo {
+  position: absolute;
+  height: 31PX;
+  width: 26PX;
+  background: url("/bundle/images/passport/yoho.png");
+  background-size: 100% 100%;
+  top: 10PX;
+  left: 15PX; }
+
+.login-page .acc-container {
+  padding-left: 45PX; }
+
+.login-page .op-container {
+  position: relative;
+  width: 100%;
+  margin: 20PX 0;
+  text-align: left;
+  font-size: 16PX; }
+  .login-page .op-container .sms-login {
+    text-decoration: underline;
+    color: #858585; }
+  .login-page .op-container .forget-pwd {
+    position: absolute;
+    right: 0;
+    text-decoration: underline;
+    color: #858585; }
+
+.login-page .third-party-login {
+  text-align: left; }
+  .login-page .third-party-login > span {
+    font-size: 16PX;
+    color: #858585; }
+  .login-page .third-party-login .tp-link {
+    text-align: center;
+    padding: 20PX 0; }
+    .login-page .third-party-login .tp-link > a {
+      display: inline-block;
+      width: 44PX;
+      height: 44PX;
+      margin: 0 7PX;
+      border-radius: 50%;
+      background-color: #333;
+      background-repeat: no-repeat;
+      background-size: 100% 100%; }
+    .login-page .third-party-login .tp-link .alipay {
+      background-image: url("/bundle/images/passport/alipay.png"); }
+    .login-page .third-party-login .tp-link .weibo {
+      background-image: url("/bundle/images/passport/weibo.png"); }
+    .login-page .third-party-login .tp-link .qq {
+      background-image: url("/bundle/images/passport/qq.png"); }
+    .login-page .third-party-login .tp-link .wechat {
+      display: none;
+      background-image: url("/bundle/images/passport/wechat.png"); }
+
+.login-page .international {
+  display: block;
+  width: 200PX;
+  padding: 5PX 10PX;
+  background-color: #333;
+  border: none;
+  border-radius: 20PX;
+  margin: 0 auto 28px;
+  font-size: 16PX;
+  color: #d8d8d8; }
+
+.login-page .go-register {
+  color: #858585; }
+  .login-page .go-register a {
+    color: inherit; }
+
+.login-page .login-tip {
+  font-size: 16PX;
+  position: relative;
+  color: #d8d8d8;
+  margin: 15PX 0; }
+  .login-page .login-tip .info-icon {
+    display: inline-block;
+    height: 12PX;
+    width: 12PX;
+    background-image: url("/bundle/images/passport/info.png");
+    background-size: 100% 100%; }
+
+.login-page .mask {
+  position: fixed;
+  display: none;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.login-page .retrive-pwd-ways {
+  position: fixed;
+  display: none;
+  bottom: 5PX;
+  left: 10PX;
+  right: 10PX;
+  font-size: 16PX; }
+  .login-page .retrive-pwd-ways li {
+    background-color: #fff;
+    width: 100%;
+    height: 40PX;
+    line-height: 40PX;
+    text-align: center; }
+    .login-page .retrive-pwd-ways li:nth-child(1) {
+      border-top-left-radius: 5PX;
+      border-top-right-radius: 5PX;
+      border-bottom: 1PX solid #9f9f9f; }
+    .login-page .retrive-pwd-ways li:nth-child(2) {
+      border-bottom-left-radius: 5PX;
+      border-bottom-right-radius: 5PX; }
+    .login-page .retrive-pwd-ways li:last-child {
+      margin-top: 10PX;
+      border-radius: 5PX; }
+
+.wechat-body .wechat {
+  display: inline-block !important; }

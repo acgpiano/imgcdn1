@@ -1,0 +1,35 @@
+{
+  "database": {
+      "client": "mysql",
+      "connection": {
+          "host"     : "127.0.0.1",
+          "user"     : "root",
+          "password" : "",
+          "database" : "ghost"
+      }
+  },
+  "paths": {
+      "contentPath": "content/"
+  },
+  "logging": {
+      "level": "info",
+      "rotation": {
+          "enabled": true
+      },
+      "transports": ["file", "stdout"]
+  },
+  "storage": {
+    "active": "qn-store",
+    "qn-store": {
+      "accessKey": "your access key",
+      "secretKey": "your secret key",
+      "bucket": "your bucket name",
+      "origin": "http://xx.xx.xx.glb.clouddn.com",
+      "fileKey": {
+        "safeString": true,
+        "prefix": "YYYYMM/"
+      }
+    }
+  },
+  "url": "http://xxx.com"
+}

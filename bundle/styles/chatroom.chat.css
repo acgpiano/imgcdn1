@@ -1,0 +1,97 @@
+@charset "UTF-8";
+@media screen and (max-width: 374px) {
+  html {
+    font-size: 14px; } }
+
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  html {
+    font-size: 18px; } }
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 26px; } }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; }
+
+blockquote {
+  margin: 10px 3px;
+  padding: 0; }
+
+.other {
+  position: relative;
+  padding: 5px;
+  line-height: 1.2;
+  text-align: center;
+  color: #fff;
+  /*自动换行*/
+  max-width: 10rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  /*生成圆角*/
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  /*线性渐变颜色*/
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9d835), to(#f3961c));
+  background: -moz-linear-gradient(top, #f9d835, #f3961c);
+  background: -o-linear-gradient(top, #f9d835, #f3961c);
+  background: linear-gradient(top, #f9d835, #f3961a); }
+
+.me {
+  position: relative;
+  left: 100%;
+  margin-left: -11rem;
+  padding: 5px;
+  line-height: 1.2;
+  text-align: center;
+  color: #fff;
+  /*自动换行*/
+  max-width: 10rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  /*生成圆角*/
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  /*线性渐变颜色*/
+  background: -webkit-gradient(linear, left top, left bottom, from(#3eef22), to(#37c621));
+  background: -moz-linear-gradient(top, #3eef22, #37c621);
+  background: -o-linear-gradient(top, #3eef22, #37c621);
+  background: linear-gradient(top, #3eef22, #37c621); }
+
+.chat-container {
+  position: fixed;
+  bottom: 0;
+  padding: 10px 0;
+  height: 1rem;
+  width: 100%;
+  background: #000;
+  /* older safari/Chrome browsers */
+  -webkit-opacity: 0.7;
+  /* Netscape and Older than Firefox 0.9 */
+  -moz-opacity: 0.7;
+  /* Safari 1.x (pre WebKit!) 老式khtml内核的Safari浏览器*/
+  -khtml-opacity: 0.7;
+  /* IE9 + etc...modern browsers */
+  opacity: .7;
+  /* IE 4-9 */
+  filter: alpha(opacity=70);
+  /*This works in IE 8 & 9 too*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; }
+
+.chat-container input {
+  display: block;
+  margin: 0 auto;
+  width: 20rem;
+  outline: none; }
+
+.chat-container button {
+  display: block;
+  margin: 0 auto;
+  width: 20rem;
+  outline: none;
+  margin-top: 20px; }

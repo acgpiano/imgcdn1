@@ -1,0 +1,9 @@
+{
+  "dest_dir"   :   "./",
+  "bucket"     :   "myblog",
+  "cdn_domain" :   "qiniu.cjfcjf.com",
+  "log_file"   :   "download.log",
+  "log_level"  :   "info",
+  "log_rotate" :   1,
+  "log_stdout" :   false
+}

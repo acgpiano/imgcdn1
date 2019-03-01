@@ -1,0 +1,253 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+html,
+body {
+  height: 100%;
+  background: url("/bundle/images/main-bg.jpg") no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed; }
+
+/*
+添加菜单过渡动画效果
+*/
+.blog-container,
+menu,
+.menu-link {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out; }
+
+/*
+整体容器div定位
+*/
+.blog-container {
+  height: 100%;
+  position: relative;
+  padding-left: 0; }
+
+.blog-container.active menu {
+  left: 220px;
+  width: 220px; }
+
+.blog-container.active .menu-link {
+  left: 220px; }
+
+/*菜单*/
+menu {
+  margin-left: -220px;
+  width: 220px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background: -moz-linear-gradient(left, white, rgba(255, 255, 255, 0.7));
+  background: -webkit-linear-gradient(left, white, rgba(255, 255, 255, 0.7));
+  background: -ms-linear-gradient(left, white, rgba(255, 255, 255, 0.7));
+  background: -o-linear-gradient(left, white, rgba(255, 255, 255, 0.7));
+  background: linear-gradient(to right, white, rgba(255, 255, 255, 0.7)); }
+
+menu a {
+  border: none;
+  padding: 0.6em 0 0.6em 0.6em;
+  text-align: center; }
+
+menu .pure-menu,
+menu .pure-menu ul {
+  border: none;
+  background: transparent; }
+
+/*菜单里的分割线*/
+menu .pure-menu ul,
+menu .pure-menu .menu-item-divided {
+  border-top: 1px solid #333; }
+
+/*a标签的访问效果*/
+menu .pure-menu li a:hover,
+menu .pure-menu li a:focus {
+  background: #333; }
+
+/*li的选中效果*/
+menu .pure-menu-selected,
+menu .pure-menu-selected a {
+  color: #fff; }
+
+/*响应式动态菜单*/
+.menu-link {
+  position: fixed;
+  display: block;
+  /* show this only on small screens */
+  top: 0;
+  left: 0;
+  /* "menu width" */
+  background: #000;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 10px;
+  /* change this value to increase/decrease button size */
+  z-index: 10;
+  width: 2em;
+  height: auto;
+  padding: 2.1em 1.6em; }
+
+.menu-link:hover,
+.menu-link:focus {
+  background: #000; }
+
+.menu-link span {
+  position: relative;
+  display: block; }
+
+.menu-link span,
+.menu-link span:before,
+.menu-link span:after {
+  background-color: #fff;
+  width: 100%;
+  height: 0.2em; }
+
+.menu-link span:before,
+.menu-link span:after {
+  position: absolute;
+  margin-top: -0.6em;
+  content: " "; }
+
+.menu-link span:after {
+  margin-top: 0.6em; }
+
+/* -- Responsive Styles (Media Queries) ------------------------------------- */
+/*
+Hides the menu at `48em`, but modify this based on your app's needs.
+*/
+@media (min-width: 48em) {
+  .header,
+  .content {
+    padding-left: 2em;
+    padding-right: 2em; }
+  .blog-container {
+    padding-left: 220px;
+    /* left col width "menu" */
+    left: 0; }
+  menu {
+    left: 220px; }
+  .menu-link {
+    position: fixed;
+    left: 220px;
+    display: none; }
+  .blog-container.active .menu-link {
+    left: 220px; }
+  section.main {
+    margin-right: 300px; } }
+
+@media (max-width: 48em) {
+  /* Only apply this when the window is small. Otherwise, the following
+    case results in extra padding on the left:
+        * Make the window small.
+        * Tap the menu to trigger the active state.
+        * Make the window large again.
+    */
+  .blog-container.active {
+    position: relative;
+    left: 220px; }
+  .right-sider {
+    display: none; } }
+
+menu header {
+  height: 210px;
+  border-bottom: 1px solid #999;
+  color: #999;
+  text-align: center; }
+  menu header .icon {
+    background: #c31616 url("/bundle/images/icon.png") no-repeat;
+    background-size: 100% 100%;
+    height: 80px;
+    width: 80px;
+    margin: 20px auto;
+    border: 5px solid #000;
+    border-radius: 50%; }
+  menu header h3 {
+    margin-bottom: 10px;
+    color: #c31616; }
+  menu header span {
+    display: inline-block;
+    padding: 0 5px;
+    color: #444;
+    border-radius: 2px;
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 0 5px 10px 0; }
+
+section.main {
+  height: 100%;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch; }
+  section.main ul.main-ul {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    min-height: 100%; }
+  section.main .main-li {
+    word-wrap: break-word;
+    list-style-type: none;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #999; }
+    section.main .main-li a.li-a {
+      text-decoration: none;
+      color: #5badf0; }
+      section.main .main-li a.li-a:hover {
+        text-decoration: underline; }
+      section.main .main-li a.li-a:after {
+        color: #5badf0; }
+    section.main .main-li h3.li-h3 {
+      font-weight: normal;
+      color: #999;
+      padding-bottom: 5px; }
+    section.main .main-li h2.li-h2 {
+      border-bottom: 1px solid #999;
+      padding-bottom: 10px;
+      font-weight: normal;
+      color: #2a73c1; }
+    section.main .main-li p.li-p {
+      padding: 10px 0;
+      color: #333; }
+      section.main .main-li p.li-p a {
+        color: #2a73c1; }
+    section.main .main-li .readed {
+      color: #999;
+      font-size: 14px;
+      text-align: right; }
+
+.pure-menu-link {
+  padding: .5em 3em;
+  color: #c31616; }
+
+.right-sider {
+  position: fixed;
+  top: 0;
+  right: 300px;
+  bottom: 0;
+  width: 300px;
+  margin-right: -300px;
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.7), white);
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.7), white);
+  background: -ms-linear-gradient(left, rgba(255, 255, 255, 0.7), white);
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0.7), white);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), white); }
+  .right-sider h4 {
+    text-align: center;
+    padding: 20px;
+    letter-spacing: 3px;
+    font-size: 25px;
+    font-weight: normal; }
+  .right-sider a {
+    display: block;
+    color: #5badf0;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 5px; }
