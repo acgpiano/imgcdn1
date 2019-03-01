@@ -1,0 +1,16 @@
+language: node_js # 升级版本需要依赖 npm
+node_js: stable
+
+install: true # 无需安装依赖，调过安装
+
+branches:
+  only:
+  - master # 只发布 master 分支
+
+before_script:
+- git config --global user.name "travis" # 配置 travis git 信息
+- git config --global user.email "travis@zzs0.com"
+
+script:
+- git push -f https://$GITHUB_KEY@github.com/acgpiano/imgcdn1.git `npm version patch -m "%s [ci skip]"` # 打 Tag，发布到 Github Release, 使用 [ci skip] 调过 CI， 防止死循环
+- git push -f https://$GITHUB_KEY@github.com/acgpiano/imgcdn1.git HEAD:master #将新版本文件推送回 Github
