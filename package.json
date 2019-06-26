@@ -1,6 +1,6 @@
 {
   "name": "imgcdn1",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "img cdn 1",
   "main": "ajax.js",
   "scripts": {
